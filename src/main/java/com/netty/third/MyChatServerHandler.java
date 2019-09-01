@@ -48,6 +48,8 @@ public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
         Channel channel = ctx.channel();
 
         channelGroup.writeAndFlush("[服务端]" +channel.remoteAddress() + "离开\n");
+
+        System.out.println(channelGroup.size());
     }
 
     @Override
